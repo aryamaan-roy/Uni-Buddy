@@ -9,17 +9,17 @@ The student helper website serves two purposes:
 
 ## How to Run
 Run the following commands in the folder containing the project (Windows powershell) :
-> pip install -r requirements.txt
-> $env:FLASK_APP="application.py"
-> flask run
+-> pip install -r requirements.txt
+-> $env:FLASK_APP="application.py"
+-> flask run
 
 Then open the link provided in a web browser, and voila !
 
 ## Specifications:
-> Flask, Python and sql languages are used. HTML and CSS for frontend.
-> application.py contains the main code describing all functions for app routes and helps.py contains helper
+-> Flask, Python and sql languages are used. HTML and CSS for frontend.
+-> application.py contains the main code describing all functions for app routes and helps.py contains helper
   functions.
-> student.db is a sqlite database containing 2 tables :
+-> student.db is a sqlite database containing 2 tables :
   1. 'students' to keep record of all registered users
   2. 'messages' to keep record of all messages sent and recieved
 
