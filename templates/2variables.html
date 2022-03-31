@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Calculator
+{% endblock %}
+
+{% block main %}
+    <form action="/2variables" method="post">
+    <font size = "5%">
+      <p align=left>
+      Equation 1:<br>
+       <div class="form-row">
+
+               <input type="text" class="form-control" name="a1" size="4%">
+               x +
+
+              <input type="text" class="form-control" name="b1" size="4%">
+               y =
+
+              <input type="text" class="form-control" name="c1" size="4%">
+
+      </div>
+     </p>
+     <p align=left>
+     Equation 2:<br>
+      <div class="form-row">
+
+              <input type="text" class="form-control" name="a2" size="4%">
+              x +
+              <input type="text" class="form-control" name="b2" size="4%">
+              y =
+              <input type="text" class="form-control" name="c2" size="4%">
+      </div>
+      </p>
+      <button class="btn btn-primary" type="submit">Done</button>
+      </font>
+    </form>
+{% endblock %}

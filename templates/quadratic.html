@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quadratic
+{% endblock %}
+
+{% block main %}
+    <form action="/quadratic" method="post">
+    <font size = "5%">
+      <p align=left>
+      Quadratic Equation:<br>
+       <div class="form-row">
+
+               <input type="text" class="form-control" name="a" size="4%">
+               x^2 +
+
+              <input type="text" class="form-control" name="b" size="4%">
+               x +
+
+              <input type="text" class="form-control" name="c" size="4%">
+              = 0
+      </div>
+     </p>
+      <button class="btn btn-primary" type="submit">Done</button>
+      </font>
+    </form>
+{% endblock %}

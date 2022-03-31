@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Compose
+{% endblock %}
+
+{% block main %}
+    <form action="/compose" method="post">
+        <div class="form-group">
+            <select class="form-control" name="name">
+                <option disabled selected value>To</option>
+                    {% for stud in studlist %}
+
+                    <option value="{{ stud }}">{{ stud }}</option>
+
+                    {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="sub" placeholder="Subject" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="message" placeholder="Message" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Send</button>
+    </form>
+{% endblock %}

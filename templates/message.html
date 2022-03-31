@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Message
+{% endblock %}
+
+{% block main %}
+    <form action="/compose" method="get">
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Compose</button>
+        </div>
+    </form>
+      {% for mssg in mssglist %}
+       {% if mssg["To"] == name %}
+        <p>
+         <dl class="row">
+           <dt class="col-sm-3">From</dt>
+           <dd class="col-sm-9">{{ mssg["From"] }}</dd>
+           <dt class="col-sm-3">Subject</dt>
+           <dd class="col-sm-9">{{ mssg["Subject"] }}</dd>
+           <dt class="col-sm-3">Message</dt>
+           <dd class="col-sm-9"><p>{{ mssg["Message"] }}</p></dd>
+         </dl>
+        </p>
+       {% endif %}
+      {% endfor %}
+{% endblock %}

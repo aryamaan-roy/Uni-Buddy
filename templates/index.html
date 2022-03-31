@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+<p>
+    <form action="/message" method="get">
+        <button class="btn btn-primary" type="submit">Messages</button>
+    </form>
+</p>
+<p>
+    <form action="/mathhelp" method="get">
+        <button class="btn btn-primary" type="submit">Math helper</button>
+    </form>
+</p>
+{% endblock %}

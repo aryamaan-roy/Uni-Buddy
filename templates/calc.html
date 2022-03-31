@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Calculator
+{% endblock %}
+
+{% block main %}
+    <form action="/calc" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="num1" placeholder="Number" type="text">
+        </div>
+        <div class="form-group">
+            <select class="form-control" name="operation">
+                <option disabled selected value>Operation</option>
+                <option value="X">X</option>
+                <option value="÷">÷</option>
+                <option value="-">-</option>
+                <option value="+">+</option>
+                <option value="%">%</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="num2" placeholder="Number" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Calculate</button>
+    </form>
+{% endblock %}

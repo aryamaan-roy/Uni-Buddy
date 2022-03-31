@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Mathhelp
+{% endblock %}
+
+{% block main %}
+    <p><form action="/calc" method="get">
+        <button class="btn btn-primary" type="submit">Arithematic Calculator</button>
+    </form></p>
+    <p><form action="/2variables" method="get">
+        <button class="btn btn-primary" type="submit">Linear equality (2 variables)</button>
+    </form></p>
+    <p><form action="/quadratic" method="get">
+        <button class="btn btn-primary" type="submit">Quadratic Equation</button>
+    </form></p>
+{% endblock %}
